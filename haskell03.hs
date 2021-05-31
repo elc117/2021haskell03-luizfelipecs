@@ -1,3 +1,5 @@
+--NOME: Luiz Felipe Cavalheiro
+
 add10toall :: [Int] -> [Int]
 add10toall list = [x+10 | x <- list]
 
