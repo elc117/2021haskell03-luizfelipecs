@@ -37,8 +37,8 @@ calcExpr list = [x^2/2 | x <- list, x^2/2 > 10]
 trSpaces :: String -> String
 trSpaces str = [if x == ' ' then '-' else x | x <- str]
 
---selectSnd :: [(Int,Int)] -> [Int]
---selectSnd (a,b) = [ y | (_,y) <- [(a,b)]]
+selectSnd :: [(Int,Int)] -> [Int]
+selectSnd b = [y | (_,y) <- b]
 
---dotProd :: [Int] -> [Int] -> Int
---dotProd l1 l2 = [zip l1 l2]
+dotProd :: [Int] -> [Int] -> Int
+dotProd l1 l2 = sum [x*y | (x,y) <- (zip l1 l2)]
